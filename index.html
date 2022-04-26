@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de códigos | Halo Infinite</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script defer src="js/generator.js"></script>
+    <script src="https://kit.fontawesome.com/0209842b96.js" crossorigin="anonymous"></script>
+    <!--Insertar icono-->
+    <link rel="shortcut icon" href="img/halo.ico" type="image/x-icon">
+</head>
+<body>
+    <img class="background" src="img/background.jpg" alt="fondo">
+    <div class="background_container">
+    </div>
+    <main class="form">
+        <img class="logo" src="img/logo.png" alt="logo">
+        <h1 class="title">
+            Generador de códigos
+        </h1>
+        <p class="description">
+            Genera códigos aleatorios para tener la posibilidad obtener una recompensa.
+        </p>
+        <a href="https://www.halowaypoint.com/es/redeem?view=redeem" target="_blank" class="link">
+            Ir al Redeem
+        </a>
+        <p class="codigo" id="codigo">
+                XXXX-XXXX-XXXX-XXXX-XXXX
+        </p>
+        <button class="button" onclick="generarCadenaAleatoria()">
+            Generar código
+        </button>
+    </main>
+</body>
+</html>

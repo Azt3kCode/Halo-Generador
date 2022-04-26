@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Share+Tech+Mono&display=swap');
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    background: linear-gradient(to top, #000000, transparent);
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    animation: backMove 60s linear infinite;
+}
+
+.notificacion {
+    font-family: 'Share Tech Mono', monospace;
+    width: 400px;
+    height: 70px;
+    padding: 10px;
+    color: #fff;
+    background: #000000aa;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #000000aa;
+    transition: all 0.3 ease;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: newMsg 0.5s ease;
+}
+
+.link {
+    font-family: 'Share Tech Mono', monospace;
+    color: #88ccff;
+}
+
+.color {
+    animation: arcoiris 3s linear;
+}
+
+.fas {
+    animation: arcoiris 3s linear;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+@keyframes newMsg {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.logo {
+    width: 50%;
+    height: auto;
+    z-index: 1;
+    margin: 0 25%;
+}
+
+.form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 600px;
+    height: auto;
+    background: #000000aa;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #000000aa;
+    padding: 40px;
+}
+
+.title {
+    font-family: 'Share Tech Mono', monospace;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.description {
+    color: #aaa;
+    font-weight: 100;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+
+.button {
+    position: relative;
+    font-family: 'Share Tech Mono', monospace;
+    color: #000;
+    width: 75%;
+    height: 50px;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border: 3px solid #000;
+    background: #ffc11c;
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px 0px #ffc11c,
+                -1.5px -1.5px 0px #ffc11c,
+                1.5px -1.5px 0px #ffc11c,
+                -1.5px 1.5px 0px #ffc11c;
+    margin: 0 12.5%;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background: #ffd77d;
+    letter-spacing: 3px;
+    border: 5px solid #000;
+    box-shadow: 1.5px 1.5px 0px #ffd77d,
+                -1.5px -1.5px 0px #ffd77d,
+                1.5px -1.5px 0px #ffd77d,
+                -1.5px 1.5px 0px #ffd77d;
+}
+
+.codigo {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+    animation: arcoiris 3s linear infinite;
+}
+
+@keyframes backMove {
+    0% {
+        transform: translateY(0);
+        filter: brightness(1.3);
+    }
+    50% {
+        transform: translateY(-200px);
+        filter: brightness(0.5);
+    }
+    100% {
+        transform: translateY(0);
+        filter: brightness(1.3);
+    }
+}
+
+/*Si la pantalla mide menos de 1200px*/
+
+
+@media screen and (max-width: 1200px) {
+    .background {
+        position: fixed;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        width: auto;
+        height: auto;
+        animation: none;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .codigo {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .button {
+        width: 100%;
+        margin: 0 auto;
+        letter-spacing: 3px;
+    }
+}
+
+@keyframes arcoiris {
+    0% {
+        color: #ff7777;
+        filter: drop-shadow(0 0 5px #ff7777);
+    }
+    16% {
+        color: #ffff77;
+        filter: drop-shadow(0 0 5px #ffff77);
+    }
+    33% {
+        color: #77ff77;
+        filter: drop-shadow(0 0 5px #77ff77);
+    }
+    49% {
+        color: #77ffff;
+        filter: drop-shadow(0 0 5px #77ffff);
+    }
+    65% {
+        color: #7777ff;
+        filter: drop-shadow(0 0 5px #7777ff);
+    }
+    82% {
+        color: #ff77ff;
+        filter: drop-shadow(0 0 5px #ff77ff);
+    }
+    100% {
+        color: #ff7777;
+        filter: drop-shadow(0 0 5px #ff7777);
+    }
+}
